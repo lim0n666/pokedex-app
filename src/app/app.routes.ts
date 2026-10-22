@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-
   {
     path: '',
     redirectTo: 'list-pokemon',
@@ -15,11 +14,10 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'detail-pokemon/:id',
+    path: 'detail-pokemon',
     loadComponent: () =>
-      import('./pages/detail-pokemon/detail-pokemon/detail-pokemon.page').then(
+      import('./pages/detail-pokemon/detail-pokemon.page').then(
         (m) => m.DetailPokemonPage
       ),
   },
-  
 ];
