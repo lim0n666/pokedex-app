@@ -1,0 +1,31 @@
+ion-grid {
+  padding: 12px 16px;
+}
+
+.border-bottom {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 18px;
+  margin-bottom: 12px;
+  padding: 8px 4px;
+  transition: transform 0.15s ease, background 0.15s ease;
+
+  &:active {
+    transform: scale(0.98);
+    background: var(--app-surface-2);
+  }
+
+  // Sprite
+  ion-col:first-child ion-img {
+    background: var(--app-surface-2);
+    border-radius: 14px;
+    padding: 6px;
+  }
+
+  // Nombre
+  ion-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+}

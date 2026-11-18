@@ -1,0 +1,151 @@
+$type-colors: (
+  normal: #c3c3a5,
+  fire: #ff8a3d,
+  water: #4aa3ff,
+  electric: #ffe14a,
+  grass: #7dff7d,
+  ice: #8ff3ff,
+  fighting: #ff5a4a,
+  poison: #d58cff,
+  ground: #e0b45a,
+  flying: #a9b8ff,
+  psychic: #ff6fa8,
+  bug: #b5e03a,
+  rock: #c9b45a,
+  ghost: #9a7aff,
+  dragon: #6a5aff,
+  dark: #9c8c84,
+  steel: #b8c4d6,
+  fairy: #ffaee0,
+);
+
+ion-content {
+  --background: #04050d;
+}
+
+// Botón naranja de cerrar
+.close-fab {
+  --background: #ff6a00;
+  --color: #fff;
+  --box-shadow: 0 0 14px rgba(255, 106, 0, 0.8);
+}
+
+// Imagen del pokémon centrada arriba
+.pokemon-image {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 4px;
+
+  img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 16px rgba(120, 150, 255, 0.7));
+  }
+}
+
+// Tarjetas oscuras con borde neón
+.neon-card {
+  --background: #0b1038;
+  background: #0b1038;
+  color: #fff;
+  border: 1px solid rgba(110, 130, 255, 0.45);
+  border-radius: 18px;
+  box-shadow: 0 0 14px rgba(80, 100, 255, 0.25);
+
+  ion-card-title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(120, 150, 255, 0.9);
+  }
+
+  ion-card-content {
+    color: #e6e9ff;
+  }
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #aab4ff;
+}
+
+.value {
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(150, 170, 255, 0.8);
+}
+
+.types,
+.abilities {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+// Pastillas de tipo con color neón
+.type-pill {
+  padding: 4px 16px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #0b1038;
+  border: 2px solid var(--c, #fff);
+  color: var(--c, #fff);
+  box-shadow: 0 0 10px var(--c, #fff);
+}
+
+@each $name, $color in $type-colors {
+  .type-#{$name} {
+    --c: #{$color};
+  }
+}
+
+// Estadísticas
+.stat-row {
+  display: grid;
+  grid-template-columns: 78px 36px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.stat-value {
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+.stat-bar {
+  height: 10px;
+  border-radius: 6px;
+  --background: rgba(255, 255, 255, 0.15);
+
+  &[color='danger'] {
+    --progress-background: #ff4d4d;
+    filter: drop-shadow(0 0 4px rgba(255, 77, 77, 0.8));
+  }
+
+  &[color='warning'] {
+    --progress-background: #ffd84d;
+    filter: drop-shadow(0 0 4px rgba(255, 216, 77, 0.8));
+  }
+
+  &[color='success'] {
+    --progress-background: #4dff88;
+    filter: drop-shadow(0 0 4px rgba(77, 255, 136, 0.8));
+  }
+}

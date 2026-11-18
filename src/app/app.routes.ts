@@ -10,14 +10,19 @@ export const routes: Routes = [
     path: 'list-pokemon',
     loadComponent: () =>
       import('./pages/list-pokemon/list-pokemon/list-pokemon.page').then(
-        (m) => m.ListPokemonPage
-      ),
+  (m) => m.ListPokemonPage
+),
   },
   {
-    path: 'detail-pokemon',
+    path: 'detail-pokemon/:id',
     loadComponent: () =>
       import('./pages/detail-pokemon/detail-pokemon.page').then(
         (m) => m.DetailPokemonPage
       ),
+  },
+  {
+    path: '**',
+    redirectTo: 'list-pokemon',
+    pathMatch: 'full',
   },
 ];

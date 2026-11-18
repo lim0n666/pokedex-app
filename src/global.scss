@@ -34,4 +34,53 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+//@import '@ionic/angular/css/palettes/dark.system.css';
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+:root {
+  --app-bg: #0b0e17;
+  --app-surface: #151a28;
+  --app-surface-2: #1c2233;
+  --app-border: rgba(255, 255, 255, 0.06);
+  --app-text: #e8ebf4;
+  --app-muted: #8b93a8;
+  --app-accent: #ff5a2c;
+
+  --ion-font-family: "Space Grotesk", sans-serif;
+  --ion-card-color: var(--app-text);
+  --ion-card-content-color: var(--app-text);
+}
+
+ion-content {
+  --background: var(--app-bg);
+  --color: var(--app-text);
+}
+
+ion-text {
+  color: var(--app-text);
+}
+
+ion-img {
+  image-rendering: pixelated; // sprites pixelados más nítidos
+}
+
+ion-card {
+  --background: var(--app-surface);
+  --color: var(--app-text);
+  margin: 16px;
+  border-radius: 20px;
+  border: 1px solid var(--app-border);
+  box-shadow: none;
+}
+
+ion-card-title {
+  --color: var(--app-text);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+ion-fab-button {
+  --background: var(--app-accent);
+  --color: #fff;
+}

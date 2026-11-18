@@ -1,4 +1,4 @@
-export interface IStat{
-     base_stat: number;
-    name: string;
+export interface IStat {
+    base_stat: number;
+    name:string;
 }
